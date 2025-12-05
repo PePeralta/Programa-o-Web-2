@@ -21,7 +21,7 @@
     <div class="main_menu">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-          <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+          <a class="navbar-brand logo_h" href="index.php"><img src="img/logo.png" alt=""></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="icon-bar"></span>
@@ -30,36 +30,36 @@
           </button>
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
-              <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
               <li class="nav-item submenu dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                   aria-expanded="false">Shop</a>
                 <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="category.html">Shop Category</a></li>
-                  <li class="nav-item"><a class="nav-link" href="single-product.html">Product Details</a></li>
-                  <li class="nav-item"><a class="nav-link" href="checkout.html">Product Checkout</a></li>
-                  <li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmation</a></li>
-                  <li class="nav-item"><a class="nav-link" href="cart.html">Shopping Cart</a></li>
+                  <li class="nav-item"><a class="nav-link" href="category.php">Shop Category</a></li>
+                  <li class="nav-item"><a class="nav-link" href="single-product.php">Product Details</a></li>
+                  <li class="nav-item"><a class="nav-link" href="checkout.php">Product Checkout</a></li>
+                  <li class="nav-item"><a class="nav-link" href="confirmation.php">Confirmation</a></li>
+                  <li class="nav-item"><a class="nav-link" href="cart.php">Shopping Cart</a></li>
                 </ul>
 							</li>
               <li class="nav-item submenu dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                   aria-expanded="false">Blog</a>
                 <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                  <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
+                  <li class="nav-item"><a class="nav-link" href="blog.php">Blog</a></li>
+                  <li class="nav-item"><a class="nav-link" href="single-blog.php">Blog Details</a></li>
                 </ul>
 							</li>
 							<li class="nav-item submenu dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                   aria-expanded="false">Pages</a>
                 <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                  <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
-                  <li class="nav-item"><a class="nav-link" href="tracking-order.html">Tracking</a></li>
+                  <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+                  <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
+                  <li class="nav-item"><a class="nav-link" href="tracking-order.php">Tracking</a></li>
                 </ul>
               </li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
             </ul>
 
             <ul class="nav-shop">
@@ -146,7 +146,7 @@
               </div>
               <div class="card-body">
                 <p>Accessories</p>
-                <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
+                <h4 class="card-product__title"><a href="single-product.php">Quartz Belt Watch</a></h4>
                 <p class="card-product__price">$150.00</p>
               </div>
             </div>
@@ -163,7 +163,7 @@
               </div>
               <div class="card-body">
                 <p>Beauty</p>
-                <h4 class="card-product__title"><a href="single-product.html">Women Freshwash</a></h4>
+                <h4 class="card-product__title"><a href="single-product.php">Women Freshwash</a></h4>
                 <p class="card-product__price">$150.00</p>
               </div>
             </div>
@@ -180,7 +180,7 @@
               </div>
               <div class="card-body">
                 <p>Decor</p>
-                <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+                <h4 class="card-product__title"><a href="single-product.php">Room Flash Light</a></h4>
                 <p class="card-product__price">$150.00</p>
               </div>
             </div>
@@ -197,7 +197,7 @@
               </div>
               <div class="card-body">
                 <p>Decor</p>
-                <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+                <h4 class="card-product__title"><a href="single-product.php">Room Flash Light</a></h4>
                 <p class="card-product__price">$150.00</p>
               </div>
             </div>
@@ -214,7 +214,7 @@
               </div>
               <div class="card-body">
                 <p>Accessories</p>
-                <h4 class="card-product__title"><a href="single-product.html">Man Office Bag</a></h4>
+                <h4 class="card-product__title"><a href="single-product.php">Man Office Bag</a></h4>
                 <p class="card-product__price">$150.00</p>
               </div>
             </div>
@@ -231,7 +231,7 @@
               </div>
               <div class="card-body">
                 <p>Kids Toy</p>
-                <h4 class="card-product__title"><a href="single-product.html">Charging Car</a></h4>
+                <h4 class="card-product__title"><a href="single-product.php">Charging Car</a></h4>
                 <p class="card-product__price">$150.00</p>
               </div>
             </div>
@@ -248,7 +248,7 @@
               </div>
               <div class="card-body">
                 <p>Accessories</p>
-                <h4 class="card-product__title"><a href="single-product.html">Blutooth Speaker</a></h4>
+                <h4 class="card-product__title"><a href="single-product.php">Blutooth Speaker</a></h4>
                 <p class="card-product__price">$150.00</p>
               </div> 
             </div>
@@ -312,7 +312,7 @@
             </div>
             <div class="card-body">
               <p>Accessories</p>
-              <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
+              <h4 class="card-product__title"><a href="single-product.php">Quartz Belt Watch</a></h4>
               <p class="card-product__price">$150.00</p>
             </div>
           </div>
@@ -328,7 +328,7 @@
             </div>
             <div class="card-body">
               <p>Beauty</p>
-              <h4 class="card-product__title"><a href="single-product.html">Women Freshwash</a></h4>
+              <h4 class="card-product__title"><a href="single-product.php">Women Freshwash</a></h4>
               <p class="card-product__price">$150.00</p>
             </div>
           </div>
@@ -344,7 +344,7 @@
             </div>
             <div class="card-body">
               <p>Decor</p>
-              <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+              <h4 class="card-product__title"><a href="single-product.php">Room Flash Light</a></h4>
               <p class="card-product__price">$150.00</p>
             </div>
           </div>
@@ -360,7 +360,7 @@
             </div>
             <div class="card-body">
               <p>Decor</p>
-              <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+              <h4 class="card-product__title"><a href="single-product.php">Room Flash Light</a></h4>
               <p class="card-product__price">$150.00</p>
             </div>
           </div>
@@ -376,7 +376,7 @@
             </div>
             <div class="card-body">
               <p>Accessories</p>
-              <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
+              <h4 class="card-product__title"><a href="single-product.php">Quartz Belt Watch</a></h4>
               <p class="card-product__price">$150.00</p>
             </div>
           </div>
@@ -392,7 +392,7 @@
             </div>
             <div class="card-body">
               <p>Beauty</p>
-              <h4 class="card-product__title"><a href="single-product.html">Women Freshwash</a></h4>
+              <h4 class="card-product__title"><a href="single-product.php">Women Freshwash</a></h4>
               <p class="card-product__price">$150.00</p>
             </div>
           </div>
@@ -408,7 +408,7 @@
             </div>
             <div class="card-body">
               <p>Decor</p>
-              <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+              <h4 class="card-product__title"><a href="single-product.php">Room Flash Light</a></h4>
               <p class="card-product__price">$150.00</p>
             </div>
           </div>
@@ -424,7 +424,7 @@
             </div>
             <div class="card-body">
               <p>Decor</p>
-              <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+              <h4 class="card-product__title"><a href="single-product.php">Room Flash Light</a></h4>
               <p class="card-product__price">$150.00</p>
             </div>
           </div>
@@ -452,7 +452,7 @@
                   <li><a href="#">By Admin</a></li>
                   <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
                 </ul>
-                <h4 class="card-blog__title"><a href="single-blog.html">The Richland Center Shooping News and weekly shooper</a></h4>
+                <h4 class="card-blog__title"><a href="single-blog.php">The Richland Center Shooping News and weekly shooper</a></h4>
                 <p>Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.</p>
                 <a class="card-blog__link" href="#">Read More <i class="ti-arrow-right"></i></a>
               </div>
@@ -469,7 +469,7 @@
                   <li><a href="#">By Admin</a></li>
                   <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
                 </ul>
-                <h4 class="card-blog__title"><a href="single-blog.html">The Shopping News also offers top-quality printing services</a></h4>
+                <h4 class="card-blog__title"><a href="single-blog.php">The Shopping News also offers top-quality printing services</a></h4>
                 <p>Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.</p>
                 <a class="card-blog__link" href="#">Read More <i class="ti-arrow-right"></i></a>
               </div>
@@ -486,7 +486,7 @@
                   <li><a href="#">By Admin</a></li>
                   <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
                 </ul>
-                <h4 class="card-blog__title"><a href="single-blog.html">Professional design staff and efficient equipment you’ll find we offer</a></h4>
+                <h4 class="card-blog__title"><a href="single-blog.php">Professional design staff and efficient equipment you’ll find we offer</a></h4>
                 <p>Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.</p>
                 <a class="card-blog__link" href="#">Read More <i class="ti-arrow-right"></i></a>
               </div>

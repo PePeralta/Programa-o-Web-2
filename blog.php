@@ -21,7 +21,7 @@
     <div class="main_menu">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-          <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+          <a class="navbar-brand logo_h" href="index.php"><img src="img/logo.png" alt=""></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="icon-bar"></span>
@@ -30,36 +30,36 @@
           </button>
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
-              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
               <li class="nav-item submenu dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                   aria-expanded="false">Shop</a>
                 <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="category.html">Shop Category</a></li>
-                  <li class="nav-item"><a class="nav-link" href="single-product.html">Product Details</a></li>
-                  <li class="nav-item"><a class="nav-link" href="checkout.html">Product Checkout</a></li>
-                  <li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmation</a></li>
-                  <li class="nav-item"><a class="nav-link" href="cart.html">Shopping Cart</a></li>
+                  <li class="nav-item"><a class="nav-link" href="category.php">Shop Category</a></li>
+                  <li class="nav-item"><a class="nav-link" href="single-product.php">Product Details</a></li>
+                  <li class="nav-item"><a class="nav-link" href="checkout.php">Product Checkout</a></li>
+                  <li class="nav-item"><a class="nav-link" href="confirmation.php">Confirmation</a></li>
+                  <li class="nav-item"><a class="nav-link" href="cart.php">Shopping Cart</a></li>
                 </ul>
 							</li>
               <li class="nav-item active submenu dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                   aria-expanded="false">Blog</a>
                 <ul class="dropdown-menu">
-                  <li class="nav-item active"><a class="nav-link" href="blog.html">Blog Single</a></li>
-                  <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
+                  <li class="nav-item active"><a class="nav-link" href="blog.php">Blog Single</a></li>
+                  <li class="nav-item"><a class="nav-link" href="single-blog.php">Blog Details</a></li>
                 </ul>
 							</li>
 							<li class="nav-item submenu dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                   aria-expanded="false">Pages</a>
                 <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                  <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
-                  <li class="nav-item"><a class="nav-link" href="tracking-order.html">Tracking</a></li>
+                  <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+                  <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
+                  <li class="nav-item"><a class="nav-link" href="tracking-order.php">Tracking</a></li>
                 </ul>
               </li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
             </ul>
 
             <ul class="nav-shop">
@@ -103,7 +103,7 @@
                 <img class="card-img rounded-0" src="img/blog/cat-post/cat-post-3.jpg" alt="post">
                 <div class="categories_details">
                     <div class="categories_text">
-                        <a href="single-blog.html">
+                        <a href="single-blog.php">
                             <h5>Social Life</h5>
                         </a>
                         <div class="border_line"></div>
@@ -117,7 +117,7 @@
             <img class="card-img rounded-0" src="img/blog/cat-post/cat-post-2.jpg" alt="post">
             <div class="categories_details">
               <div class="categories_text">
-                <a href="single-blog.html">
+                <a href="single-blog.php">
                     <h5>Politics</h5>
                 </a>
                 <div class="border_line"></div>
@@ -131,7 +131,7 @@
                 <img class="card-img rounded-0" src="img/blog/cat-post/cat-post-1.jpg" alt="post">
                 <div class="categories_details">
                     <div class="categories_text">
-                        <a href="single-blog.html">
+                        <a href="single-blog.php">
                             <h5>Food</h5>
                         </a>
                         <div class="border_line"></div>
@@ -188,13 +188,13 @@
                               <div class="blog_post">
                                   <img src="img/blog/main-blog/m-blog-1.jpg" alt="">
                                   <div class="blog_details">
-                                      <a href="single-blog.html">
+                                      <a href="single-blog.php">
                                           <h2>Astronomy Binoculars A Great Alternative</h2>
                                       </a>
                                       <p>MCSE boot camps have its supporters and its detractors. Some people do not understand
                                           why you should have to spend money on boot camp when you can get the MCSE study
                                           materials yourself at a fraction.</p>
-                                      <a class="button button-blog" href="single-blog.html">View More</a>
+                                      <a class="button button-blog" href="single-blog.php">View More</a>
                                   </div>
                               </div>
                           </div>
@@ -236,13 +236,13 @@
                               <div class="blog_post">
                                   <img src="img/blog/main-blog/m-blog-2.jpg" alt="">
                                   <div class="blog_details">
-                                      <a href="single-blog.html">
+                                      <a href="single-blog.php">
                                           <h2>The Basics Of Buying A Telescope</h2>
                                       </a>
                                       <p>MCSE boot camps have its supporters and its detractors. Some people do not understand
                                           why you should have to spend money on boot camp when you can get the MCSE study
                                           materials yourself at a fraction.</p>
-                                      <a href="single-blog.html" class="button button-blog">View More</a>
+                                      <a href="single-blog.php" class="button button-blog">View More</a>
                                   </div>
                               </div>
                           </div>
@@ -284,13 +284,13 @@
                               <div class="blog_post">
                                   <img src="img/blog/main-blog/m-blog-3.jpg" alt="">
                                   <div class="blog_details">
-                                      <a href="single-blog.html">
+                                      <a href="single-blog.php">
                                           <h2>The Glossary Of Telescopes</h2>
                                       </a>
                                       <p>MCSE boot camps have its supporters and its detractors. Some people do not understand
                                           why you should have to spend money on boot camp when you can get the MCSE study
                                           materials yourself at a fraction.</p>
-                                      <a href="single-blog.html" class="button button-blog">View More</a>
+                                      <a href="single-blog.php" class="button button-blog">View More</a>
                                   </div>
                               </div>
                           </div>
@@ -332,13 +332,13 @@
                               <div class="blog_post">
                                   <img src="img/blog/main-blog/m-blog-4.jpg" alt="">
                                   <div class="blog_details">
-                                      <a href="single-blog.html">
+                                      <a href="single-blog.php">
                                           <h2>The Night Sky</h2>
                                       </a>
                                       <p>MCSE boot camps have its supporters and its detractors. Some people do not understand
                                           why you should have to spend money on boot camp when you can get the MCSE study
                                           materials yourself at a fraction.</p>
-                                      <a href="single-blog.html" class="button button-blog">View More</a>
+                                      <a href="single-blog.php" class="button button-blog">View More</a>
                                   </div>
                               </div>
                           </div>
@@ -380,13 +380,13 @@
                               <div class="blog_post">
                                   <img src="img/blog/main-blog/m-blog-5.jpg" alt="">
                                   <div class="blog_details">
-                                      <a href="single-blog.html">
+                                      <a href="single-blog.php">
                                           <h2>Telescopes 101</h2>
                                       </a>
                                       <p>MCSE boot camps have its supporters and its detractors. Some people do not understand
                                           why you should have to spend money on boot camp when you can get the MCSE study
                                           materials yourself at a fraction.</p>
-                                      <a href="single-blog.html" class="button button-blog">View More</a>
+                                      <a href="single-blog.php" class="button button-blog">View More</a>
                                   </div>
                               </div>
                           </div>
@@ -469,7 +469,7 @@
                           <div class="media post_item">
                               <img src="img/blog/popular-post/post1.jpg" alt="post">
                               <div class="media-body">
-                                  <a href="single-blog.html">
+                                  <a href="single-blog.php">
                                       <h3>Space The Final Frontier</h3>
                                   </a>
                                   <p>02 Hours ago</p>
@@ -478,7 +478,7 @@
                           <div class="media post_item">
                               <img src="img/blog/popular-post/post2.jpg" alt="post">
                               <div class="media-body">
-                                  <a href="single-blog.html">
+                                  <a href="single-blog.php">
                                       <h3>The Amazing Hubble</h3>
                                   </a>
                                   <p>02 Hours ago</p>
@@ -487,7 +487,7 @@
                           <div class="media post_item">
                               <img src="img/blog/popular-post/post3.jpg" alt="post">
                               <div class="media-body">
-                                  <a href="single-blog.html">
+                                  <a href="single-blog.php">
                                       <h3>Astronomy Or Astrology</h3>
                                   </a>
                                   <p>03 Hours ago</p>
@@ -496,7 +496,7 @@
                           <div class="media post_item">
                               <img src="img/blog/popular-post/post4.jpg" alt="post">
                               <div class="media-body">
-                                  <a href="single-blog.html">
+                                  <a href="single-blog.php">
                                       <h3>Asteroids telescope</h3>
                                   </a>
                                   <p>01 Hours ago</p>
