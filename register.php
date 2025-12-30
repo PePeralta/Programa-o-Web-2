@@ -1,58 +1,41 @@
 <?php
-require 'db.php'; // onde tens estabelecerConexao()
+require 'db.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if(isset($_POST['submit'])){;
 
-    // Receber campos
-    $username = trim($_POST['name']);
-    $email = trim($_POST['email']);
-    $password = $_POST['password'];
-    $confirm = $_POST['confirmPassword'];
+	if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['password']) || empty($_POST['confirmPassword'])){
+		echo "<script>alert('Preencha todos os dados');</script>";
+	}else{
+		if($_POST['password'] != $_POST['confirmPassword']){
+			echo "<script>alert('As palavavras passes não coincidem.');</script>";
+		}else{
 
-    // Validar campos
-    if (empty($username) || empty($email) || empty($password) || empty($confirm)) {
-        echo "Preenche todos os campos!";
-        exit;
-    }
+			$name = $_POST['name'];
+			$email = $_POST['email'];
+			$password = sha1($_POST['password']);
 
-    if ($password !== $confirm) {
-        echo "As palavras-passe não coincidem!";
-        exit;
-    }
+			$sql = "SELECT id FROM users WHERE email='$email'";
+			$res = mysqli_query($conexao, $sql);
 
-    // Conectar à BD
-    $con = estabelecerConexao();
+			if(mysqli_num_rows($res) > 0){
+				echo "<script>alert('Já existe uma conta com esse email.');</script>";
+			}else{
 
-    // ---- VERIFICAR SE EXISTE USER OU EMAIL ----
-    $stmt = mysqli_prepare($con, "SELECT id FROM users WHERE username = ? OR email = ?");
-    mysqli_stmt_bind_param($stmt, "ss", $username, $email);
-    mysqli_stmt_execute($stmt);
-    mysqli_stmt_store_result($stmt);
+				$sql_insert = "INSERT INTO users (username, email, password) VALUES ('$name', '$email', '$password')";
+				if (mysqli_query($conexao, $sql_insert)) {
+					header('Location: login.php');
+				}else{
+					echo "<script>alert('Erro ao criar a conta.');</script>";
+				}
+			}
 
-    if (mysqli_stmt_num_rows($stmt) > 0) {
-        echo "Esse username ou email já está registado!";
-        exit;
-    }
-    mysqli_stmt_close($stmt);
+		}
 
-    // ---- ENCRIPTAR PASSWORD ----
-    $hash = password_hash($password, PASSWORD_DEFAULT);
+	}
 
-    // ---- INSERIR NA BD ----
-    $stmt = mysqli_prepare($con, "INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
-    mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hash);
-
-    if (mysqli_stmt_execute($stmt)) {
-        // Sucesso → redirecionar
-        header("Location: login.html?registo=sucesso");
-        exit;
-    } else {
-        echo "Erro ao criar conta!";
-    }
-
-    mysqli_stmt_close($stmt);
-    mysqli_close($con);
 }
+
+
 ?>
 
 
@@ -165,12 +148,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 								<input type="text" class="form-control" id="name" name="name" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
 							</div>
 							<div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="email" name="email" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'">
-              </div>
-              <div class="col-md-12 form-group">
+								<input type="email" class="form-control" id="email" name="email" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'">
+              				</div>
+              				<div class="col-md-12 form-group">
 								<input type="text" class="form-control" id="password" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
-              </div>
-              <div class="col-md-12 form-group">
+              				</div>
+              				<div class="col-md-12 form-group">
 								<input type="text" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirm Password'">
 							</div>
 							<div class="col-md-12 form-group">
@@ -180,7 +163,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 								</div>
 							</div>
 							<div class="col-md-12 form-group">
-								<button type="submit" value="submit" class="button button-register w-100">Register</button>
+								<button type="submit" name="submit" class="button button-register w-100">Register</button>
 							</div>
 						</form>
 					</div>

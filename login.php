@@ -1,3 +1,28 @@
+<?php
+session_start();
+include 'db.php';
+
+if (isset($_POST['submit'])) {
+
+    $nome = $_POST['name'];
+    $pass = sha1($_POST['password']);
+
+    $sql = "SELECT id FROM users WHERE email='$nome' AND password='$pass'";
+    $verificarlogin = mysqli_query($conexao, $sql);
+
+    if ($verificarlogin && mysqli_num_rows($verificarlogin) == 1) {
+
+        $row = mysqli_fetch_assoc($verificarlogin);
+        $_SESSION['user'] = $row['id'];
+
+        header('Location:index.php');
+
+    } else {
+        echo "<script>alert('Login sem sucesso');</script>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +39,6 @@
   <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
   <link rel="stylesheet" href="vendors/nice-select/nice-select.css">
   <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
-
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -102,7 +126,7 @@
 				<div class="col-lg-6">
 					<div class="login_form_inner">
 						<h3>Log in to enter</h3>
-						<form class="row login_form" action="#/" id="contactForm" >
+						<form class="row login_form" method="post">
 							<div class="col-md-12 form-group">
 								<input type="text" class="form-control" id="name" name="name" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
 							</div>
@@ -116,7 +140,7 @@
 								</div>
 							</div> -->
 							<div class="col-md-12 form-group">
-								<button type="submit" value="submit" class="button button-login w-100">Log In</button>
+								<button type="submit" name="submit" class="button button-login w-100">Log In</button>
 								<a href="#">Forgot Password?</a>
 							</div>
 						</form>
