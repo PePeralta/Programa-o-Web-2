@@ -73,34 +73,36 @@ if(isset($_POST['submit'])){;
           </button>
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
-              <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-              <li class="nav-item active submenu dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false">Shop</a>
-                <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="category.php">Shop Category</a></li>
-                  <li class="nav-item"><a class="nav-link" href="single-product.php">Product Details</a></li>
-                  <li class="nav-item"><a class="nav-link" href="checkout.php">Product Checkout</a></li>
-                  <li class="nav-item"><a class="nav-link" href="confirmation.php">Confirmation</a></li>
-                  <li class="nav-item"><a class="nav-link" href="cart.php">Shopping Cart</a></li>
-                </ul>
-							</li>
+              <li class="nav-item"><a class="nav-link" href="category.php">Loja</a></li>
 							<li class="nav-item submenu dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false">Pages</a>
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Conta</a>
                 <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
-                  <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
-                  <li class="nav-item"><a class="nav-link" href="tracking-order.php">Tracking</a></li>
+                <?php
+                    if(isset($_SESSION['user'])){
+                      echo '
+                          <li class="nav-item"><a class="nav-link" href="account-details.php">Perfil</a></li>
+                          <li class="nav-item"><a class="nav-link" href="billing-page.php">Pagamentos</a></li>
+                          <li class="nav-item"><a class="nav-link" href="security-page.php">Segurança</a></li>
+                      ';
+                    }else{
+                      echo '
+                          <li class="nav-item"><a class="nav-link" href="login.php">Entrar</a></li>
+                          <li class="nav-item"><a class="nav-link" href="register.php">Registar</a></li>
+                      ';
+                    }
+                ?>
                 </ul>
               </li>
-              <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.php">Contactos
+              </a></li>
             </ul>
 
             <ul class="nav-shop">
-              <li class="nav-item"><button><i class="ti-search"></i></button></li>
-              <li class="nav-item"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button> </li>
-              <li class="nav-item"><a class="button button-header" href="#">Buy Now</a></li>
+              <?php
+                if(isset($_SESSION['user'])){
+                  echo '<li class="nav-item"><button><a href="cart.php"><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></a></button> </li>';
+                }
+              ?>
             </ul>
           </div>
         </div>
@@ -109,24 +111,6 @@ if(isset($_POST['submit'])){;
   </header>
 	<!--================ End Header Menu Area =================-->
   
-  <!-- ================ start banner area ================= -->	
-	<section class="blog-banner-area" id="category">
-		<div class="container h-100">
-			<div class="blog-banner">
-				<div class="text-center">
-					<h1>Register</h1>
-					<nav aria-label="breadcrumb" class="banner-breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Register</li>
-            </ol>
-          </nav>
-				</div>
-			</div>
-    </div>
-	</section>
-	<!-- ================ end banner area ================= -->
-  
   <!--================Login Box Area =================-->
 	<section class="login_box_area section-margin">
 		<div class="container">
@@ -134,36 +118,32 @@ if(isset($_POST['submit'])){;
 				<div class="col-lg-6">
 					<div class="login_box_img">
 						<div class="hover">
-							<h4>Already have an account?</h4>
-							<p>There are advances being made in science and technology everyday, and a good example of this is the</p>
-							<a class="button button-account" href="login.html">Login Now</a>
+							<h4>Já tens uma conta?</h4>
+							<p>Se já tens uma conta criada, então clica neste botão neste botão em baixo</p>
+							<a class="button button-account" href="login.php">Iniciar sessão</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6">
 					<div class="login_form_inner register_form_inner">
-						<h3>Create an account</h3>
+						<h3>Criar conta</h3>
 						<form class="row login_form" action="register.php" method="POST">
 							<div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
+								<input type="text" class="form-control" id="name" name="name" placeholder="Nome de utlizador" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome de Utilizador'">
 							</div>
 							<div class="col-md-12 form-group">
-								<input type="email" class="form-control" id="email" name="email" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'">
+								<input type="email" class="form-control" id="email" name="email" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
               				</div>
               				<div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="password" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+								<input type="text" class="form-control" id="password" name="password" placeholder="Palavra-passe" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Palavra-passe'">
               				</div>
               				<div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirm Password'">
+								<input type="text" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirmar Palavra-passe" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirmar Palavra-passe'">
 							</div>
 							<div class="col-md-12 form-group">
-								<div class="creat_account">
-									<input type="checkbox" id="f-option2" name="selector">
-									<label for="f-option2">Keep me logged in</label>
-								</div>
 							</div>
 							<div class="col-md-12 form-group">
-								<button type="submit" name="submit" class="button button-register w-100">Register</button>
+								<button type="submit" name="submit" class="button button-login w-100">Registar</button>
 							</div>
 						</form>
 					</div>
@@ -175,65 +155,38 @@ if(isset($_POST['submit'])){;
 
 
 
-  <!--================ Start footer Area  =================-->	
-	<footer>
-		<div class="footer-area footer-only">
+ <footer>
+		<div class="footer-area">
 			<div class="container">
 				<div class="row section_gap">
-					<div class="col-lg-3 col-md-6 col-sm-6">
-						<div class="single-footer-widget tp_widgets ">
-							<h4 class="footer_title large_title">Our Mission</h4>
-							<p>
-								So seed seed green that winged cattle in. Gathering thing made fly you're no 
-								divided deep moved us lan Gathering thing us land years living.
-							</p>
-							<p>
-								So seed seed green that winged cattle in. Gathering thing made fly you're no divided deep moved 
-							</p>
-						</div>
-					</div>
 					<div class="offset-lg-1 col-lg-2 col-md-6 col-sm-6">
 						<div class="single-footer-widget tp_widgets">
-							<h4 class="footer_title">Quick Links</h4>
+							<h4 class="footer_title">Ligações Rápidas</h4>
 							<ul class="list">
-								<li><a href="#">Home</a></li>
-								<li><a href="#">Shop</a></li>
-								<li><a href="#">Product</a></li>
-								<li><a href="#">Brand</a></li>
-								<li><a href="#">Contact</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-2 col-md-6 col-sm-6">
-						<div class="single-footer-widget instafeed">
-							<h4 class="footer_title">Gallery</h4>
-							<ul class="list instafeed d-flex flex-wrap">
-								<li><img src="img/gallery/r1.jpg" alt=""></li>
-								<li><img src="img/gallery/r2.jpg" alt=""></li>
-								<li><img src="img/gallery/r3.jpg" alt=""></li>
-								<li><img src="img/gallery/r5.jpg" alt=""></li>
-								<li><img src="img/gallery/r7.jpg" alt=""></li>
-								<li><img src="img/gallery/r8.jpg" alt=""></li>
+								<li><a href="index.php">Página principal</a></li>
+								<li><a href="category.php">Produtos</a></li>
+								<li><a href="account-details.php">Conta</a></li>
+								<li><a href="contact.php">Contactos</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="offset-lg-1 col-lg-3 col-md-6 col-sm-6">
 						<div class="single-footer-widget tp_widgets">
-							<h4 class="footer_title">Contact Us</h4>
+							<h4 class="footer_title">Contacta-nos</h4>
 							<div class="ml-40">
 								<p class="sm-head">
 									<span class="fa fa-location-arrow"></span>
-									Head Office
+									Alenquer
 								</p>
-								<p>123, Main Street, Your City</p>
+								<p>Rua das Flores, Lote 31, Carregado</p>
 	
 								<p class="sm-head">
 									<span class="fa fa-phone"></span>
-									Phone Number
+									Telemóvel
 								</p>
 								<p>
-									+123 456 7890 <br>
-									+123 456 7890
+									+351 931 545 012 <br>
+									+351 963 861 296
 								</p>
 	
 								<p class="sm-head">
@@ -241,23 +194,11 @@ if(isset($_POST['submit'])){;
 									Email
 								</p>
 								<p>
-									free@infoexample.com <br>
-									www.infoexample.com
+									240001218@esg.ipsantarem.pt<br>
 								</p>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="footer-bottom">
-			<div class="container">
-				<div class="row d-flex">
-					<p class="col-lg-12 footer-text text-center">
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 				</div>
 			</div>
 		</div>

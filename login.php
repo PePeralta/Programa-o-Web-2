@@ -8,13 +8,14 @@ if (isset($_POST['submit'])) {
     $nome = $_POST['name'];
     $pass = sha1($_POST['password']);
 
-    $sql = "SELECT id FROM users WHERE email='$nome' AND password='$pass'";
+    $sql = "SELECT id,tipo FROM users WHERE email='$nome' AND password='$pass'";
     $verificarlogin = mysqli_query($conexao, $sql);
 
     if ($verificarlogin && mysqli_num_rows($verificarlogin) == 1) {
 
         $row = mysqli_fetch_assoc($verificarlogin);
         $_SESSION['user'] = $row['id'];
+		$_SESSION['tipo'] = $row['tipo'];
 
         header('Location:index.php');
 

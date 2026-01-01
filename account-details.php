@@ -99,6 +99,7 @@ if(isset($_POST['sair'])){
             </ul>
 
             <ul class="nav-shop">
+              <?php if($_SESSION['tipo'] == 'administrador'){ echo '<li class="nav-item"><a href="admin-painel.php">⚙️</a></li>';}?>
               <li class="nav-item"><button><a href="cart.php"><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></a></button> </li>
             </ul>
           </div>
